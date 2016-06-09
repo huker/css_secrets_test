@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        p{
+            border: 1px solid #dd1144;
+            padding: 10px;
+        }
+        .btn1{
+            padding: .3em .8em;
+            border: 1px solid #446d88;
+            background: #58a linear-gradient(#77a0bb, #58a);
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em gray;
+            color: white;
+            text-shadow:0 -.05em .05em #335166;
+            font-size: 125%;
+            line-height: 1.5;
+        }
+
+        .btn2{
+            padding: .3em .8em;
+            background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent);
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+            color: white;
+            text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+            font-size: 125%;
+            line-height: 1.5;
+        }
+        button.color1{
+            background-color: #c00;
+        }
+        button.color2{
+            background-color: #6b0;
+        }
+        hr{
+            height: 2em;
+            background: currentColor;
+        }
+    </style>
+</head>
+<body>
+<button class="btn1">Yes!</button>
+<p>某些值相互依赖的时候 应该把他们的互相关系用代码表达出来 比如以字体为基准 line-height就能用倍数 别的也可以用em</p>
+<hr/>
+<button class="btn2 color1">OK</button>
+<button class="btn2 color2">Cancel</button>
+<p>重构css，公用css加私有的颜色css -> 不同颜色版本的按钮</p>
+</body>
+</html>
