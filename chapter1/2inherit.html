@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        .callout{
+            display: none;
+            position: relative;
+            background: #FDF1A6;
+            font-size: 80%;
+            padding: .4em;
+            line-height: 3;
+            margin-top: .4em;
+            width: 200px;
+            border-radius: .4em;
+            box-shadow: 0 .15em .45em gray ;
+        }
+        .callout::before{
+            content: "";
+            padding: .35em;
+            position: absolute;
+            top: -.4em;
+            left: 1em;
+            background: inherit;
+            border: inherit;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<form action="" style="margin-left:100px">
+    <label for="name">username:</label><br>
+    <input type="text" id="name"/>
+    <div id="promptbox" class="callout">这是一个提示框啊提示框</div>
+</form>
+</body>
+<script>
+    var oIpt = document.getElementById('name');
+    var oBox = document.getElementById('promptbox');
+    oIpt.onfocus = function(){
+        oBox.style.display = 'block';
+    };
+    oIpt.onblur = function(){
+        oBox.style.display = 'none';
+    };
+</script>
+</html>
