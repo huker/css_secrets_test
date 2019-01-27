@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 0 50px;
+        }
+
+        /*div {*/
+            /*background: #446d88;*/
+            /*color: #ffffff;*/
+            /*width: 100px;*/
+            /*text-align: center;*/
+            /*padding: 10px;*/
+        /*}*/
+
+        .demo1 {
+            transform: skewX(-45deg);
+            background: #446d88;
+            color: #ffffff;
+            width: 100px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .demo1 .noSkew {
+            transform: skewX(45deg);
+        }
+        .demo3{
+            color: #ffffff;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .demo3::before{
+            content:'';
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            transform: skewX(-45deg);
+            background: #446d88;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+<p>demo1</p>
+<div class="demo1">
+    About
+</div>
+<p>demo2</p>
+<div class="demo1">
+    <div class="noSkew">
+        About
+    </div>
+</div>
+<p>demo3</p>
+<div class="demo3">
+    About
+</div>
+</body>
+</html>
